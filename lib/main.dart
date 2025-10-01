@@ -147,64 +147,64 @@ void dispose() {
       //   backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       //   title: Text(widget.title),
       // ),
-      body: !generated ?
+      body:// !generated ?
        
-      Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(children: [
-          TextField(
-            controller: idController,
-            decoration: InputDecoration(
-              border: OutlineInputBorder(),
-              labelText: 'Student ID'
-            ),
-            keyboardType: TextInputType.number,
-          ),
-          SizedBox(height: 8),
-          TextField(
-            controller: nameController,
-            decoration: InputDecoration(
-              border: OutlineInputBorder(),
-              labelText: 'Student Name'
-            ),
-            keyboardType: TextInputType.name,
-          ),
-          SizedBox(height: 8),
-          TextField(
-            controller: programController,
-            decoration: InputDecoration(
-              border: OutlineInputBorder(),
-              labelText: 'Program'
-            ),
-            keyboardType: TextInputType.text,
-          ),
-          SizedBox(height: 8),
-          TextField(
-            controller: departmentController,
-            decoration: InputDecoration(
-              border: OutlineInputBorder(),
-              labelText: 'Department'
-            ),
-            keyboardType: TextInputType.text,
-          ), 
-          SizedBox(height: 8),
-          TextField(
-            controller: countryController,
-            decoration: InputDecoration(
-              border: OutlineInputBorder(),
-              labelText: 'Country'
-            ),
-            keyboardType: TextInputType.text,
-          ),
-          SizedBox(height: 8),
-          ElevatedButton(onPressed: pickImage, child: Text("Pick Image")),
-          SizedBox(height: 8),
-          ElevatedButton(onPressed: generateCard, child: Text("Generate ID card")),
-        ]),
-      )
+      // Padding(
+      //   padding: const EdgeInsets.all(8.0),
+      //   child: Column(children: [
+      //     TextField(
+      //       controller: idController,
+      //       decoration: InputDecoration(
+      //         border: OutlineInputBorder(),
+      //         labelText: 'Student ID'
+      //       ),
+      //       keyboardType: TextInputType.number,
+      //     ),
+      //     SizedBox(height: 8),
+      //     TextField(
+      //       controller: nameController,
+      //       decoration: InputDecoration(
+      //         border: OutlineInputBorder(),
+      //         labelText: 'Student Name'
+      //       ),
+      //       keyboardType: TextInputType.name,
+      //     ),
+      //     SizedBox(height: 8),
+      //     TextField(
+      //       controller: programController,
+      //       decoration: InputDecoration(
+      //         border: OutlineInputBorder(),
+      //         labelText: 'Program'
+      //       ),
+      //       keyboardType: TextInputType.text,
+      //     ),
+      //     SizedBox(height: 8),
+      //     TextField(
+      //       controller: departmentController,
+      //       decoration: InputDecoration(
+      //         border: OutlineInputBorder(),
+      //         labelText: 'Department'
+      //       ),
+      //       keyboardType: TextInputType.text,
+      //     ), 
+      //     SizedBox(height: 8),
+      //     TextField(
+      //       controller: countryController,
+      //       decoration: InputDecoration(
+      //         border: OutlineInputBorder(),
+      //         labelText: 'Country'
+      //       ),
+      //       keyboardType: TextInputType.text,
+      //     ),
+      //     SizedBox(height: 8),
+      //     ElevatedButton(onPressed: pickImage, child: Text("Pick Image")),
+      //     SizedBox(height: 8),
+      //     ElevatedButton(onPressed: generateCard, child: Text("Generate ID card")),
+      //   ]),
+      // )
 
 
-      :
+      // :
       
       Stack(
         children: [
@@ -231,7 +231,7 @@ void dispose() {
                         ),
                       ),
                       child: ClipRRect(
-                        child: Image.network(selectedImage!.path, fit: BoxFit.cover),
+                        child: Image.network('assets/Tausif.JPG', fit: BoxFit.cover),
                       ),
                     ),
                     Container(
@@ -269,7 +269,7 @@ void dispose() {
                                   ),
                                 ),
                                 SizedBox(width: 8),
-                                Text(studentID, style: defaultTextStyle(20, weight: FontWeight.normal, color: Colors.white)),
+                                Text('210041253', style: defaultTextStyle(20, weight: FontWeight.normal, color: Colors.white)),
                               ],
                             ),
                           ),
@@ -294,7 +294,7 @@ void dispose() {
                     ),
                     Padding(
                       padding: const EdgeInsets.only( top: 1 ,bottom: 1),
-                      child: Text(studentName, style: defaultTextStyle(20, weight: FontWeight.bold), textAlign: TextAlign.center),
+                      child: Text('Muhammad Tausif Ul Islam', style: defaultTextStyle(20, weight: FontWeight.bold), textAlign: TextAlign.center),
                     ),
                     Container(
                       width: 200,
@@ -305,7 +305,7 @@ void dispose() {
                             children: [
                               Icon(Icons.school, color: Color(0xFF023020), size: 25),
                               SizedBox(width: 8),
-                              Text('Program B.Sc. in $program', style: defaultTextStyle(16, weight: FontWeight.normal)),
+                              Text('Program B.Sc. in CSE', style: defaultTextStyle(16, weight: FontWeight.normal)),
                             ],
                           ),
                           Row(
@@ -320,22 +320,22 @@ void dispose() {
                                 ),
                               ),
                               SizedBox(width: 8),
-                              Text('Department $department', style: defaultTextStyle(20, weight: FontWeight.normal)),
+                              Text('Department CSE', style: defaultTextStyle(20, weight: FontWeight.normal)),
                             ],
                           ),
                           Row(
                             children: [
                               Icon(Icons.location_on, color: Color(0xFF023020), size: 25),
                               SizedBox(width: 8),
-                              Text(country, style: defaultTextStyle(20, weight: FontWeight.normal)),
+                              Text('Bangladesh', style: defaultTextStyle(20, weight: FontWeight.normal)),
                             ],
                           ),
                         ],
                       ),
                     ),
-                    ElevatedButton(onPressed: changeColor, child: Text('Change Color')),
-                    SizedBox(height: 4),
-                    ElevatedButton(onPressed: changeFont, child: Text('Change Font')),
+                    // ElevatedButton(onPressed: changeColor, child: Text('Change Color')),
+                    // SizedBox(height: 4),
+                    // ElevatedButton(onPressed: changeFont, child: Text('Change Font')),
                   ],
                 )
               ],
